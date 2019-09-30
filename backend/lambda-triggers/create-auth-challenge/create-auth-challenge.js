@@ -12,6 +12,7 @@ var sns = new AWS.SNS();
 
 // Main handler
 exports.handler = async (event = {}) => {
+    console.log(event);
     let secretLoginCode;
     if (!event.request.session || !event.request.session.length) {
         var phoneNumber = event.request.userAttributes.phone_number;

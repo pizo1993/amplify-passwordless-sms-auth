@@ -1,6 +1,7 @@
 "use strict";
 
 exports.handler = async (event) => {
+    console.log(event);
     if (event.request.session &&
         event.request.session.length >= 3 &&
         event.request.session.slice(-1)[0].challengeResult === false) {
